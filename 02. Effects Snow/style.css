@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #01ff6f;
+    --primary-color-dark: #0fa550;
+    --second-color: #212523;
+    --white: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    background: var(--second-color);
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+.snow_effect {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    overflow: hidden;
+    background: linear-gradient(var(--primary-color), var(--second-color) 35%);
+}
+
+.snowflake{
+    --small: 3px;
+    --medium: 7px;
+    width: var(--small);
+    height: var(--small);
+    position: absolute;
+    background-color: var(--white);
+    border-radius: 50%;
+    animation: snow 6s linear infinite,
+        wind 10s ease-in-out infinite;
+    top: -10%;
+    left: 10%;
+}
+
+.snowflake:nth-child(2n+3){
+    width: var(--medium);
+    height: var(--medium);
+}
+
+.snowflake:nth-child(1){
+    left:25%;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(2){
+    left:2%;
+    animation-delay: 2s;
+}
+
+
+.snowflake:nth-child(3){
+    left:45%;
+    animation-delay: 1.5s;
+}
+
+
+.snowflake:nth-child(4){
+    left:85%;
+    animation-delay: 4s;
+}
+
+.snowflake:nth-child(5){
+    left:65%;
+    animation-delay: 3s;
+}
+
+.snowflake:nth-child(6){
+    left:35%;
+    animation-delay: 3.5s;
+}
+
+.snowflake:nth-child(7){
+    left:90%;
+    animation-delay: 2.5s;
+}
+
+.snowflake:nth-child(8){
+    left:10%;
+    animation-delay: 4.5s;
+}
+
+.snowflake:nth-child(9){
+    left:79%;
+    animation-delay: 2s;
+}   
+
+.snowflake:nth-child(10){
+    left:74%;
+    animation-delay: 5s;
+}
+
+@keyframes snow{
+    100% {
+        top:100%
+    }
+}
+
+@keyframes wind {
+    50% {
+        transform: translateX(120px); 
+    }
+}
+
